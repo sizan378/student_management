@@ -375,7 +375,7 @@ def add_student_save(request):
             user.students.gender = gender
             user.students.profile_pic = profile_pic_url
             user.save()
-            print(user)
+            # print('student_save',student_save)
             messages.success(request, "Student Added Successfully!")
             return redirect('add_student')
         #     except ObjectDoesNotExist:

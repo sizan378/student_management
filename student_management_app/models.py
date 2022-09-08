@@ -73,6 +73,7 @@ class Students(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     objects = models.Manager()
 
+    # print('course_id',course_id)
 
 class Attendance(models.Model):
     # Subject Attendance

@@ -81,9 +81,9 @@ WSGI_APPLICATION = 'student_management_system.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ece', 
+        'NAME': 'postgres', 
         'USER': 'postgres', 
-        'PASSWORD': 'ece',
+        'PASSWORD': 'admin',
         'HOST': 'localhost', 
         'PORT': '5432',
     }
