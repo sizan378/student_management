@@ -79,13 +79,24 @@ WSGI_APPLICATION = 'student_management_system.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'postgres', 
+#         'USER': 'postgres', 
+#         'PASSWORD': 'admin',
+#         'HOST': 'localhost', 
+#         'PORT': '5432',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres', 
-        'USER': 'postgres', 
-        'PASSWORD': 'admin',
-        'HOST': 'localhost', 
+        'NAME': 'duv1ri82p3d8q', 
+        'USER': 'dfkvfgojppiyzv', 
+        'PASSWORD': 'd5752ff1dba6bb43e855a8a2450d173dd12ef2050b4a6763c3768d35aabaa170',
+        'HOST': 'ec2-44-198-82-71.compute-1.amazonaws.com', 
         'PORT': '5432',
     }
 }
