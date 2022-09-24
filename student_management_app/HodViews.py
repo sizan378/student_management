@@ -362,27 +362,27 @@ def add_student_save(request):
                 profile_pic_url = None
 
 
-            # try:
-            user = CustomUser.objects.create_user(username=username, password=password, email=email, first_name=first_name, last_name=last_name, user_type=3)
-            user.students.address = address
+            try:
+                user = CustomUser.objects.create_user(username=username, password=password, email=email, first_name=first_name, last_name=last_name, user_type=3)
+                user.students.address = address
 
-            course_obj = Courses.objects.get(id=course_id)
-            user.students.course_id = course_obj
+                course_obj = Courses.objects.get(id=course_id)
+                user.students.course_id = course_obj
 
-            session_year_obj = SessionYearModel.objects.get(id=session_year_id)
-            user.students.session_year_id = session_year_obj
+                session_year_obj = SessionYearModel.objects.get(id=session_year_id)
+                user.students.session_year_id = session_year_obj
 
-            user.students.gender = gender
-            user.students.profile_pic = profile_pic_url
-            user.save()
-            # print('student_save',student_save)
-            messages.success(request, "Student Added Successfully!")
+                user.students.gender = gender
+                user.students.profile_pic = profile_pic_url
+                user.save()
+                # print('student_save',student_save)
+                messages.success(request, "Student Added Successfully!")
+                return redirect('add_student')
+            except ObjectDoesNotExist:
+                messages.error(request, "Failed to Add Student!")
+                return redirect('add_student')
+        else:
             return redirect('add_student')
-        #     except ObjectDoesNotExist:
-        #         messages.error(request, "Failed to Add Student!")
-        #         return redirect('add_student')
-        # else:
-        #     return redirect('add_student')
 
 
 def manage_student(request):
